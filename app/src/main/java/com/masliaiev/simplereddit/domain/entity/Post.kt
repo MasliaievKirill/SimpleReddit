@@ -4,8 +4,9 @@ data class Post(
     val title: String,
     val author: String,
     val subreddit: String,
-    val dateUtc: Double,
+    val dateUtc: String,
     val thumbnail: String,
-    val numberOfComments: Int,
-    val currentRaring: Int
+    val numberOfComments: String,
+    val currentRaring: String,
+    val postUrl: String
 )

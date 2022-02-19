@@ -9,11 +9,15 @@ interface ApiService {
 
     @GET("top.json")
     fun getTopPosts(
+        @Query(QUERY_PARAM_AFTER) after: String = EMPTY_AFTER,
         @Query(QUERY_PARAM_LIMIT) limit: Int = LIMIT
     ): Single<ServerResponseDto>
 
     companion object{
+        private const val QUERY_PARAM_AFTER = "after"
         private const val QUERY_PARAM_LIMIT = "limit"
+
+        private const val EMPTY_AFTER = "null"
         private const val LIMIT = 50
     }
 }

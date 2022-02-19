@@ -19,7 +19,7 @@ data class PostDto(
 
     @SerializedName("created_utc")
     @Expose
-    val dateUtc: Double,
+    val dateUtc: Long,
 
     @SerializedName("thumbnail")
     @Expose
@@ -31,5 +31,10 @@ data class PostDto(
 
     @SerializedName("score")
     @Expose
-    val currentRaring: Int
+    val currentRaring: Int,
+
+    @SerializedName("permalink")
+    @Expose
+    val postUrl: String
+
 )
