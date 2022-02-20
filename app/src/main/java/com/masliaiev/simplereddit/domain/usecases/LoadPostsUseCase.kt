@@ -10,7 +10,7 @@ class LoadPostsUseCase @Inject constructor(
 ) {
 
     fun loadPosts(): Single<List<Post>> {
-       return postRepository.loadPosts()
+        return postRepository.loadPosts()
     }
 
 }

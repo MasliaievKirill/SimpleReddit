@@ -1,7 +1,6 @@
 package com.masliaiev.simplereddit.domain.repository
 
 import androidx.lifecycle.LiveData
-import androidx.paging.Pager
 import androidx.paging.PagingData
 import com.masliaiev.simplereddit.domain.entity.Post
 import io.reactivex.Single

@@ -1,7 +1,7 @@
 package com.masliaiev.simplereddit.di
 
 import android.app.Application
-import com.masliaiev.simplereddit.presentation.MainActivity
+import com.masliaiev.simplereddit.presentation.activities.MainActivity
 import dagger.BindsInstance
 import dagger.Component
 

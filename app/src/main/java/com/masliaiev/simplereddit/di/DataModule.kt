@@ -10,6 +10,7 @@ import com.masliaiev.simplereddit.domain.repository.PostRepository
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
+import io.reactivex.disposables.CompositeDisposable
 
 @Module
 interface DataModule {
@@ -30,6 +31,11 @@ interface DataModule {
         @ApplicationScope
         fun provideApiService(): ApiService {
             return ApiFactory.apiService
+        }
+
+        @Provides
+        fun provideCompositeDisposable(): CompositeDisposable{
+            return CompositeDisposable()
         }
     }
 }

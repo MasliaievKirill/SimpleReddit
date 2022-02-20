@@ -66,7 +66,7 @@ class PostMapper @Inject constructor() {
 
     companion object {
         private const val UNDEFINED_ID = 0
-        private const val MILLIS_IN_SECOND = 1000
+        private const val MILLIS_IN_SECOND = 1000L
         private const val SECONDS_IN_HOUR = 3600
         private const val ONE_HOUR = 1
         private const val BASE_URL = "https://www.reddit.com"

@@ -7,4 +7,7 @@
     <string name="comments">comments</string>
     <string name="rating_icon">Rating icon</string>
     <string name="votes">votes</string>
+    <string name="warning_icon">warning_icon</string>
+    <string name="something_is_wrong_warning">Something is wrong.\nCheck Internet connection and retry loading.</string>
+    <string name="retry_button">Retry</string>
 </resources>

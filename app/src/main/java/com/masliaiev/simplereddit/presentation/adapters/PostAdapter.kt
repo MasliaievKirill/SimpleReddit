@@ -10,6 +10,8 @@ import com.squareup.picasso.Picasso
 
 class PostAdapter: PagingDataAdapter<Post, PostViewHolder>(PostDiffCallback()) {
 
+    var onPostClickListener: OnPostClickListener? = null
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostViewHolder {
         val binding = PosterItemBinding.inflate(
             LayoutInflater.from(
@@ -33,7 +35,14 @@ class PostAdapter: PagingDataAdapter<Post, PostViewHolder>(PostDiffCallback()) {
                 tvNumberOfComments.text = post.numberOfComments
                 tvRating.text = post.currentRaring
                 tvDate.text = post.dateUtc
+                root.setOnClickListener {
+                    onPostClickListener?.onPosterClick(post.postUrl)
+                }
             }
         }
+    }
+
+    interface OnPostClickListener {
+        fun onPosterClick(url: String)
     }
 }
